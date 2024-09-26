@@ -27,6 +27,7 @@ body{
 .header{
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 12px;
 }
 
@@ -41,11 +42,27 @@ ul{
     padding: 0;
     list-style: none;
     display: flex;
+    align-items: center;
     gap: 12px;
 }
 
 a{
     color: var(--text-color);
     text-decoration: none;
+}
+
+@media (max-width : 500px){
+
+    .header{
+        padding: 10px;
+    }
+    .header li span{
+        display: none;
+    }
+
+    .header li a{
+        font-size: 22px;
+        gap: 16px;
+    }
 }
 
