@@ -21,6 +21,8 @@ body{
     height: 100vh;
     font-family: 'Poppins', sans-serif;
     background-color: var(--background-color);
+    max-width: 1400px; /* if we zoom out too much then it will prevent from crashing and will be nicer and the page wont look ugly*/
+    margin: 0 auto; /* same if we zoom out it's gonna go on sideways so we reset it by bringing it to center */
 }
 
 /* HEADER */
@@ -91,13 +93,65 @@ ul{
     border-radius: 50%;
 }
 
+/* SKILLS */
 
+.skills{
+    padding: 0 18px;
+    margin-bottom: 50px;
+}
+
+.skills h3{
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.skills .text {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.skills .cells{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.skills .cells .cell{
+    padding: 5px 10px;
+    margin: 10px;
+    border: 2px solid #d3d3d3;
+    border-radius: 5px;
+}
+
+@media (max-width: 800px){
+    .hero .heroLeft h2{
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 740px){
+    .hero{
+        flex-direction: column-reverse;
+    }
+
+    .hero .heroRight img{
+        height: auto;
+        width: 190px;
+    }
+}
 
 @media (max-width : 600px){  /* setting styles for mobile devies less than 500px*/
 
     .header{
         padding: 10px;
     }
+
+    .header p{
+        font-size: 20px;
+    }
+
     .header li span{ /* Removing the text only */
         display: none;
     }
@@ -106,5 +160,27 @@ ul{
         font-size: 22px;
         gap: 16px;
     }
+
+    .hero{
+        padding: 0 18px;
+    }
+
+    .hero .heroLeft h2{
+        font-size: 22px;
+    }
+
+    .skills h3{
+        font-size: 22px;
+    }
+
+    .skills{
+        padding: 0 18px;
+    }
+
+    .skills .cells .cell{
+        margin-bottom: 5px;
+    }
+
+
 }
 
