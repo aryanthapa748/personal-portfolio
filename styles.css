@@ -22,7 +22,7 @@ body{
     font-family: 'Poppins', sans-serif;
     background-color: var(--background-color);
     max-width: 1400px; /* if we zoom out too much then it will prevent from crashing and will be nicer and the page wont look ugly*/
-    margin: 0 auto; /* same if we zoom out it's gonna go on sideways so we reset it by bringing it to center */
+     /* same if we zoom out it's gonna go on sideways so we reset it by bringing it to center */
 }
 
 /* HEADER */
@@ -71,10 +71,11 @@ ul{
 
 .hero .heroLeft .links{
     margin-top: 20px;
+    text-align: center;
 }
 
 .hero .heroLeft .links a{
-    display: inline-block; /* setting this becuase when we resize and when it break to new line our text and icon will seprate so to avoid that we are using this */
+    display: inline-block; /* setting this because when we resize and when it break to new line our text and icon will seprate so to avoid that we are using this */
     color: var(--text-color);
     padding: 3px 8px;
     border: 2px solid var(--link-color);
@@ -96,8 +97,9 @@ ul{
 /* SKILLS */
 
 .skills{
-    padding: 0 18px;
+    padding: 18px;
     margin-bottom: 50px;
+    background-color: white;
 }
 
 .skills h3{
@@ -124,6 +126,55 @@ ul{
     border: 2px solid #d3d3d3;
     border-radius: 5px;
 }
+
+/* PROJECTS */
+
+.projects .projectsHeader h2{
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.projects h2{
+    margin-bottom: 10px;
+}
+
+.projectsHeader{
+    margin-bottom: 10px;
+}
+
+.projects .projectsHeader span{
+  display: block;
+  text-align: center;
+}
+
+.project{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 14px;
+    margin: 10px 0;
+    padding: 18px;
+}
+
+.project img{
+    border: 1.5px solid rgb(86, 85, 85);
+    border-radius: 15px;;
+}
+
+.project.One, .project.Three{
+    background-color: #e8e8e8;
+}
+
+.project .projectLinks{
+    margin-top: 30px;
+    text-align: center;
+}
+
+.project .projectLinks i{
+    padding: 10px 0px 10px 10px;
+}
+
 
 @media (max-width: 800px){
     .hero .heroLeft h2{
