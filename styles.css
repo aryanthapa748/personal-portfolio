@@ -8,7 +8,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    
 }
 
 html {
@@ -21,7 +20,7 @@ body{
     height: 100vh;
     font-family: 'Poppins', sans-serif;
     background-color: var(--background-color);
-    max-width: 1400px; /* if we zoom out too much then it will prevent from crashing and will be nicer and the page wont look ugly*/
+    max-width: 2500px; /* if we zoom out too much then it will prevent from crashing and will be nicer and the page wont look ugly*/
      /* same if we zoom out it's gonna go on sideways so we reset it by bringing it to center */
 }
 
@@ -98,7 +97,7 @@ ul{
 
 .skills{
     padding: 18px;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
     background-color: white;
 }
 
@@ -140,7 +139,7 @@ ul{
 }
 
 .projectsHeader{
-    margin-bottom: 10px;
+    margin-bottom: 40px;
 }
 
 .projects .projectsHeader span{
@@ -174,6 +173,44 @@ ul{
 .project .projectLinks i{
     padding: 10px 0px 10px 10px;
 }
+
+/* QUOTES */
+
+.quotes{
+    padding: 40px 100px;
+    margin: 20px;
+    text-align: center;
+}
+
+.quotes span{
+    font-weight: bold;
+}
+
+/* CONTACT ME */
+
+.contact{
+    background-color: #e8e8e8;
+    text-align: center;
+    margin: 20px 0;
+    padding: 30px 50px;
+}
+
+.contact .contactDiv h2{
+    font-size: 30px;
+}
+
+.contactDiv{
+    margin-bottom: 25px;
+}
+
+.contact .contactLinks i{
+    padding: 10px;
+}
+
+.contact .contactLinks{
+    margin-bottom: 25px;
+}
+
 
 
 @media (max-width: 800px){
