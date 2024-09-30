@@ -17,11 +17,11 @@ html {
 body{
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    height: 100vh; /* ensures that the body takes up the full viewport height, which is useful if you want the content to fill the screen and avoid extra white space at the bottom.*/
     font-family: 'Poppins', sans-serif;
     background-color: var(--background-color);
-    max-width: 2500px; /* if we zoom out too much then it will prevent from crashing and will be nicer and the page wont look ugly*/
-    margin: 0 auto; /* same if we zoom out it's gonna go on sideways so we reset it by bringing it to center */
+    max-width: 2500px; /* if we zoom out too much then it will prevent from crashing on ultra-wide screens */
+    margin: 0 auto; /* centers content horizontally to prevent drifting on side if we zoom out to much on big screens */
 }
 
 /* HEADER */
@@ -52,8 +52,7 @@ ul{
     text-decoration: none;
 }
 
-/* HERO SECTION */
-
+/* HERO */
 .hero{
     display: flex;
     justify-content: space-between;
@@ -74,13 +73,13 @@ ul{
 }
 
 .hero .heroLeft .links a{
-    display: inline-block; /* setting this because when we resize and when it break to new line our text and icon will seprate so to avoid that we are using this */
+    display: inline-block; /* Prevent text and icon separation / breaking into seperate like on resize  */
     color: var(--text-color);
     padding: 3px 8px;
     border: 2px solid var(--link-color);
     border-radius: 5px;
     margin-right: 5px;
-    margin-bottom: 7px;  /* when we resize it to small the link boxes will be too close so we added margin bottom to look nice*/
+    margin-bottom: 7px;  /* when we resize it to small the link boxes will be too close so we added margin bottom to look nice */
     transition: .2s;
 }
 
@@ -94,7 +93,6 @@ ul{
 }
 
 /* SKILLS */
-
 .skills{
     padding: 18px;
     margin-bottom: 40px;
@@ -127,7 +125,6 @@ ul{
 }
 
 /* PROJECTS */
-
 .projects .projectsHeader h2{
     text-align: center;
     font-size: 30px;
@@ -142,7 +139,7 @@ ul{
     margin-bottom: 40px;
 }
 
-.projects .projectsHeader span{
+.projectsHeader span{
   display: block;
   text-align: center;
 }
@@ -158,33 +155,32 @@ ul{
 
 .project img{
     border: 1.5px solid rgb(86, 85, 85);
-    border-radius: 15px;;
+    border-radius: 15px;
 }
 
 .project.One, .project.Three{
     background-color: #e8e8e8;
 }
 
-.project .projectLinks{
+.projectLinks{
     margin-top: 30px;
     text-align: center;
 }
 
-.project .projectLinks i{
+.projectLinks i{
     padding: 10px 0px 10px 10px;
 }
 
-.projects .project a{
+.project a{
     text-decoration: none;
     color: var(--link-color);
 }
 
-.projects .project a:hover{
+.project a:hover{
     color: var(--text-color);
 }
 
 /* QUOTES */
-
 .quotes{
     padding: 40px 100px;
     margin: 20px;
@@ -195,8 +191,7 @@ ul{
     font-weight: bold;
 }
 
-/* CONTACT ME */
-
+/* CONTACT */
 .contact{
     background-color: #e8e8e8;
     text-align: center;
@@ -204,11 +199,15 @@ ul{
     padding: 30px 50px;
 }
 
+.contact .contactDiv {
+    margin-bottom: 25px;
+}
+
 .contact .contactDiv h2{
     font-size: 30px;
 }
 
-.contactDiv{
+.contact .contactLinks{
     margin-bottom: 25px;
 }
 
@@ -216,10 +215,7 @@ ul{
     padding: 10px;
 }
 
-.contact .contactLinks{
-    margin-bottom: 25px;
-}
-
+/* STYLES FOR SCREEN LESS THAN 800 px */
 @media (max-width: 800px){
     .hero .heroLeft h2,
     .skills h3,
@@ -241,14 +237,13 @@ ul{
         flex-direction: column;
     }
 
-    .projects .project.One .projectOneImg img{
+    .projects .project img{
         height: auto;
         width: 400px;
     }
-
-
 }
 
+/* STYLES FOR SCREEN LESS THAN 740 px */
 @media (max-width: 740px){
     .hero{
         flex-direction: column-reverse;
@@ -260,6 +255,7 @@ ul{
     }
 }
 
+/* STYLES FOR SCREEN LESS THAN 600 px */
 @media (max-width : 600px){  /* setting styles for mobile devies less than 500px*/
 
     .header{
@@ -291,15 +287,17 @@ ul{
         font-size: 22px;
     }
 
-    
-
     .skills .cells .cell{
         margin-bottom: 5px;
     }
 
-
+    .quotes{
+        padding: 40px 50px;
+        margin: 10px;
+    }
 }
 
+/* STYLES FOR SCREEN LESS THAN 430 px */
 @media (max-width: 430px){
 
     .projects .project.One .projectOneImg img{
@@ -311,8 +309,24 @@ ul{
         height: auto;
         width: 180px;
     }
+}
 
+/* STYLES FOR SCREEN LESS THAN 340 px */
+@media (max-width: 340px){
 
+    .projects .project.One .projectOneImg img{
+        height: auto;
+        width: 270px;
+    }
 
+    .projects .project.Two .projectTwoImg img{
+        height: auto;
+        width: 120px;
+    }
+
+    .quotes{
+        padding: 20px 30px;
+        margin: 5px;
+    }
 }
 
